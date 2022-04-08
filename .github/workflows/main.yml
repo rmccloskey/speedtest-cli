@@ -40,6 +40,6 @@ jobs:
           file: ./Dockerfile
           builder: ${{ steps.buildx.outputs.name }}
           push: true
-          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/speedtest-cli:latest
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/speedtest-cli:latest
           cache-from: type=registry,ref=${{ secrets.DOCKERHUB_USERNAME }}/speedtest-cli:buildcache
           cache-to: type=registry,ref=${{ secrets.DOCKERHUB_USERNAME }}/speedtest-cli:buildcache,mode=max
